@@ -14,6 +14,7 @@ All builds are performed using provided scripts and are intended to be reproduci
 - Trilinos+SVMP installation will take roughly 4.5 GB on disk. Stampede allows a limit of 14.0 GB on $HOME and 1.0 TB on $WORK.
 - Users may choose to build the Trilinos-enabled SVMP on $WORK directory by following the below steps after "cd $WORK".
 - Do not purge modules on Stampede as it loads the required default environment in which the following will work.
+- Additional Stampede documentation is available here - https://docs.tacc.utexas.edu/hpc/stampede3/ 
 
 ---
 
@@ -108,10 +109,10 @@ JOBS=8
 The Trilinos installation script automatically applies two critical fixes to avoid known Stampede + Intel compiler issues:
 
 1. MPI linking fix
-  * Replaces legacy MPI variables with MPI::MPI_CXX
+ * Replaces legacy MPI variables with MPI::MPI_CXX
 
 2. Intel compiler compatibility fix
-   * Adds #include <cstring> to avoid memset compilation errors
+ * Adds #include <cstring> to avoid memset compilation errors
 
 These fixes are applied before building svMultiPhysics.
 
