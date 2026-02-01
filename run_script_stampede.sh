@@ -33,5 +33,5 @@
 
 module load hypre/2.30.0-i64 hdf5/1.14.6 blis/1.1 boost/1.86.0 vtk/9.3.0
 
-ibrun ~/svmp_trilinos_build/svMultiPhysics/build/svMultiPhysics-build/bin/svmultiphysics solver.xml         # Use ibrun instead of mpirun or mpiexec
+ibrun ~/svmpWithTrilinos/svmp_trilinos_build/svMultiPhysics/build/svMultiPhysics-build/bin/svmultiphysics solver.xml         # Use ibrun instead of mpirun or mpiexec
 
