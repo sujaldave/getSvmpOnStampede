@@ -101,9 +101,9 @@ git clone https://github.com/SimVascular/svMultiPhysics.git
 
 echo "==> Applying svMultiPhysics patches..."
 
-# (Fix 1) MPI linking change in Code/Source/liner_solver/CMakeLists.txt
+# (Fix 1) MPI linking change in Code/Source/linear_solver/CMakeLists.txt
 
-LS_CMAKE="$SVMP_SRC/Code/Source/liner_solver/CMakeLists.txt"
+LS_CMAKE="$SVMP_SRC/Code/Source/linear_solver/CMakeLists.txt"
 
 if grep -q 'target_link_libraries(${lib} ${MPI_LIBRARY} ${MPI_Fortran_LIBRARIES})' "$LS_CMAKE"; then
   sed -i 's|target_link_libraries(${lib} ${MPI_LIBRARY} ${MPI_Fortran_LIBRARIES})|target_link_libraries(${lib} MPI::MPI_CXX ${MPI_Fortran_LIBRARIES})|g' "$LS_CMAKE"
