@@ -17,6 +17,6 @@ git clone https://github.com/SimVascular/svMultiPhysics.git
 
 cd svMultiPhysics && mkdir build && cd build
 
-cmake ..
+cmake -DCMAKE_C_COMPILER=mpicc -DCMAKE_CXX_COMPILER=mpicxx ..
 
 make -j"${JOBS}" 
